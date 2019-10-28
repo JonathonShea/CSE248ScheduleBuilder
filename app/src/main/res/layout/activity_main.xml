@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="17"
+        android:orientation="horizontal"
+        android:background="@android:color/darker_gray">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:background="@android:color/white"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight=".5dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Available Courses"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:background="#206a6e"
+                android:textColor="@android:color/white"/>
+
+            <ListView
+                android:id="@+id/untaken_courses"
+
+                android:layout_width="match_parent"
+                android:layout_weight="16"
+                android:layout_height="0dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:background="@android:color/white"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft=".5dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#206a6e" >
+                <Spinner
+                    android:id="@+id/semester_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"
+
+                    />
+
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/taken_courses"
+                android:layout_width="match_parent"
+                android:layout_weight="16"
+                android:layout_height="0dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/courseDetailsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:textSize="18dp"/>
+    <TextView
+        android:id="@+id/courseDetails"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:scrollbars="vertical"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/enroll_btn"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="Enroll" />
+        />
+        <Button
+            android:id="@+id/unenroll_btn"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="Unenroll" />
+        />
+
+
+    </LinearLayout>
+
+</LinearLayout>
