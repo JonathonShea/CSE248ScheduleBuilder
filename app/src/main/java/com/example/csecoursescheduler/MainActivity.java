@@ -137,6 +137,7 @@ public class MainActivity extends AppCompatActivity {
         unenrollButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                takenCourses.remove(selectedCourse);
                 Course removed = ((CourseAdapter)takenCourseList.getAdapter()).removeCourse(selectedCourse);
                 if(removed != null)
                     ((CourseAdapter)courseList.getAdapter()).addCourse(removed);
